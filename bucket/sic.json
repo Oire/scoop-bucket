@@ -1,0 +1,31 @@
+{
+    "version": "1.0.2.2",
+    "description": "SIC! (Simple Image Converter) — an accessible image format converter for Windows. Converts between JPG, PNG, WEBP, ICO, BMP, TIFF, GIF, and AVIF, with optional resizing.",
+    "homepage": "https://sic.oire.dev",
+    "license": "Apache-2.0",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/Oire/sic/releases/download/v1.0.2.2/sic-v1.0.2.2-portable.zip",
+            "hash": "c6daa5bc362526a2e5d8000b89e088f13d52352643b2237be2c958d052007abd"
+        }
+    },
+    "bin": "Sic.exe",
+    "shortcuts": [
+        ["Sic.exe", "SIC!"]
+    ],
+    "persist": "userdata",
+    "notes": [
+        "SIC! runs in portable mode under Scoop. Your config, converted files, and logs are persisted in '~/scoop/persist/sic/userdata/' and survive updates.",
+        "To also wipe persisted user data on uninstall, run: scoop uninstall -p sic"
+    ],
+    "checkver": {
+        "github": "https://github.com/Oire/sic"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/Oire/sic/releases/download/v$version/sic-v$version-portable.zip"
+            }
+        }
+    }
+}
